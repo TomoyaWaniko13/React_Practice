@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// React package that we need to write React
+import React from "react";
+// Connect the React package to the DOM.
+import ReactDOM from "react-dom/client";
+// ./index.css is where we add all our css for our app.
+import "./index.css";
+// <App /> is in the render function below.
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
