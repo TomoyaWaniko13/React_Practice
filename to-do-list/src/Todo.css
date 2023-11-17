@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+}
+
+#add-area {
+  background-color: rgb(224, 255, 255);
+  padding: 10px;
+}
+
+#unfinished-area {
+  border: solid 0.5px;
+}
+
+#finished-area {
+  background-color: rgb(224, 255, 255);
+  padding: 10px;
+}
+
+#input-area {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+li {
+  display: flex;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  padding: 10px;
+  margin: 5px;
+}
