@@ -22,6 +22,19 @@ export const Todo = () => {
     setTodoText('');
   };
 
+  const onClickDelete = index => {
+    const newTodos = [...unfinishedTasks];
+    newTodos.splice(index, 1);
+    setUnfinishedTasks(newTodos);
+  };
+
+  const onClickComplete = index => {
+    const newTodos = [...finishedTasks];
+    newTodos.splice(index, 1);
+
+    const newCompleteTodos = 
+  };
+
   return (
     <>
       <div id="add-area">
@@ -37,13 +50,13 @@ export const Todo = () => {
       <div id="unfinished-area">
         <p className="title">Unfinisehd Tasks</p>
         <ul>
-          {unfinishedTasks.map(task => {
+          {unfinishedTasks.map((task, index) => {
             return (
               <li key={task}>
                 <div className="list-row">
                   <p className="todo-item">{task}</p>
-                  <button>done</button>
-                  <button>delete</button>
+                  <button onClick={() => onClickComplete(index)}>done</button>
+                  <button onClick={() => onClickDelete(index)}>delete</button>
                 </div>
               </li>
             );
