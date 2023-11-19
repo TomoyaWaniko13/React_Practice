@@ -13,6 +13,7 @@ export const Todo = () => {
         'Finished Task 2',
     ]);
 
+
     const onChangeTodoText = event => setTodoText(event.target.value);
 
     const onClickAdd = () => {
@@ -22,19 +23,30 @@ export const Todo = () => {
         setTodoText('');
     };
 
-    const onClickDelete = index => {
-        const newUnfinisedTasks = [...unfinishedTasks];
-        newUnfinisedTasks.splice(index, 1);
-        setUnfinishedTasks(newUnfinisedTasks);
-    };
+    const onClickDelete = (index) => {
+        const newTasks = [...unfinishedTasks];
+        newTasks.splice(index, 1);
+        setUnfinishedTasks(newTasks);
+    }
 
     const onClickDone = index => {
         const newUnfinishedTasks = [...unfinishedTasks];
         newUnfinishedTasks.splice(index, 1);
 
-        const newFinishedTasks = [...completeTodos,]
+        const newFinishedTasks = [...finishedTasks, unfinishedTasks[index]];
+        setUnfinishedTasks(newUnfinishedTasks);
+        setFinishedTasks(newFinishedTasks);
     };
 
+
+    const onClickUndo = (index) => {
+        const newFinishedTasks = [...finishedTasks];
+        newFinishedTasks.splice(index,1);
+
+        const newUnfinishedTasks = [...unfinishedTasks, finishedTasks[index]];
+        setUnfinishedTasks(newUnfinishedTasks);
+        setFinishedTasks(newFinishedTasks);
+    };
     return (
         <>
             <div id="add-area">
@@ -48,7 +60,7 @@ export const Todo = () => {
                 <button onClick={onClickAdd}>Add</button>
             </div>
             <div id="unfinished-area">
-                <p className="title">Unfinisehd Tasks</p>
+                <p className="title">Unfinished Tasks</p>
                 <ul>
                     {unfinishedTasks.map((task, index) => {
                         return (
@@ -66,12 +78,12 @@ export const Todo = () => {
             <div id="finished-area">
                 <p className="title">Finished Tasks</p>
                 <ul>
-                    {finishedTasks.map(task => {
+                    {finishedTasks.map((task,index) => {
                         return (
                             <li key={task}>
                                 <div className="list-row">
                                     <p className="todo-item">{task}</p>
-                                    <button>undo</button>
+                                    <button onClick={()=>onClickUndo(index)}>undo</button>
                                 </div>
                             </li>
                         );
