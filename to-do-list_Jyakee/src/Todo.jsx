@@ -45,7 +45,6 @@ export const Todo = () => {
 
         const newUnfinishedTasks = [...unfinishedTasks, finishedTasks[index]];
         setUnfinishedTasks(newUnfinishedTasks);
-        setFinishedTasks(newFinishedTasks);
     };
     return (
         <>
