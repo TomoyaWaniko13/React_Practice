@@ -30,8 +30,8 @@ export const Todo = () => {
         setFinishedTasks(newFinishedTasks);
     };
     const onClickUndo = (index) => {
-        const newFinishedTasks = [...finishedTasks];
-        newFinishedTasks.splice(index, 1);
+        let newFinishedTasks = [...finishedTasks];
+        newFinishedTasks= newFinishedTasks.splice(index, 1);
 
         const newUnfinishedTasks = [...unfinishedTasks, finishedTasks[index]];
 
