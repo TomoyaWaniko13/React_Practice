@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fd83044-3c55-4e82-bd04-06fa26a6a904" name="Changes" comment="Create todo list with React and tailwind">
-      <change afterPath="$PROJECT_DIR$/src/Components/InputTask.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UnfinishedTasks.jsx" afterDir="false" />
+    <list default="true" id="5fd83044-3c55-4e82-bd04-06fa26a6a904" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/src/Components/FinishdedTasks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UnfinishedTasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UnfinishedTasks.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
       <updated>1700420417624</updated>
       <workItem from="1700611143926" duration="2556000" />
       <workItem from="1700613866950" duration="53000" />
-      <workItem from="1700613923194" duration="9319000" />
+      <workItem from="1700613923194" duration="10556000" />
     </task>
     <task id="LOCAL-00001" summary="Create todo list with React and tailwind">
       <option name="closed" value="true" />
@@ -85,7 +85,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700623236680</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1700658090232</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700658090232</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create todo list with React and tailwind" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create todo list with React and tailwind" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>
