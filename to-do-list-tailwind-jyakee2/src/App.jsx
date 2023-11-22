@@ -1,4 +1,6 @@
 import {useState} from "react";
+import {InputTask} from "./Components/InputTask";
+
 
 function App() {
     const [text, setText] = useState("");
@@ -39,21 +41,12 @@ function App() {
     };
     return (
         <div className="App">
-            <section>
-                <div className={"flex p-10"}>
-                    <input type="text" placeholder={"Enter your task"}
-                           className={"border border-black rounded-3xl p-3 "}
-                           value={text}
-                           onChange={onChangeText}
-                    />
-                    <button
-                        className={"border border-black text-2xl m-1.5 rounded-xl p-2 " +
-                            "hover:bg-blue-500,text-white,border-none"}
-                        onClick={onClickAdd}
-                    >Add
-                    </button>
-                </div>
-            </section>
+            <InputTask
+                text={text}
+                onChangeText={onChangeText}
+                onClickAdd={onClickAdd}
+            />
+
 
             <section className={"my-3.5 ml-12"}>
                 <h1 className={"text-4xl font-bold"}>Unfinished Tasks</h1>
@@ -81,6 +74,7 @@ function App() {
                 </ul>
             </section>
 
+
             <section className={"mt-10 ml-12"}>
                 <h1 className={"text-4xl my-10 font-bold"}>Finished Tasks</h1>
                 <ul>
@@ -90,7 +84,7 @@ function App() {
                                 <p className={"mt-4 mr-5 text-2xl"}>{task}</p>
                                 <button
                                     className={"border border-black text-2xl m-1.5 rounded-xl p-2 " +
-                                        "hover:bg-blue-500 text-white"}
+                                        "hover:bg-blue-500 hover:text-white"}
                                     onClick={()=> onClickUndo(index)}
                                 >
                                     Undo
