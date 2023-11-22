@@ -41,14 +41,29 @@ function App() {
         setFinishedTasks(newFinishedTasks);
         setUnfinishedTasks(newUnfinishedTasks);
     };
+
+    const isMax = () =>{
+        return getDisabled();
+    }
+
+    function getDisabled() {
+        return unfinishedTasks.length >= 5;
+    }
+
     return (
         <div className="App">
             <InputTask
                 text={text}
                 onChangeText={onChangeText}
                 onClickAdd={onClickAdd}
+                disabled={getDisabled()}
             />
 
+            {getDisabled() && (
+                <p className={"text-red-500 ml-20 mb-10 text-4xl"}>
+                    Max tasks is 5:
+                </p>
+            )}
 
             <UnfinishedTasks
                 unfinishedTasks={unfinishedTasks}
