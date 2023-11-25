@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fd83044-3c55-4e82-bd04-06fa26a6a904" name="Changes" comment="Turn parts into Components">
+    <list default="true" id="5fd83044-3c55-4e82-bd04-06fa26a6a904" name="Changes" comment="Add max tasks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/InputTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/InputTask.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <updated>1700420417624</updated>
       <workItem from="1700611143926" duration="2556000" />
       <workItem from="1700613866950" duration="53000" />
-      <workItem from="1700613923194" duration="12876000" />
+      <workItem from="1700613923194" duration="13437000" />
     </task>
     <task id="LOCAL-00001" summary="Create todo list with React and tailwind">
       <option name="closed" value="true" />
@@ -100,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700659306443</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add max tasks">
+      <option name="closed" value="true" />
+      <created>1700664343021</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700664343021</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +128,7 @@
     <MESSAGE value="Create todo list with React and tailwind" />
     <MESSAGE value="Commit" />
     <MESSAGE value="Turn parts into Components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Turn parts into Components" />
+    <MESSAGE value="Add max tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add max tasks" />
   </component>
 </project>

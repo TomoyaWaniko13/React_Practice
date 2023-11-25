@@ -43,10 +43,6 @@ function App() {
     };
 
     const isMax = () =>{
-        return getDisabled();
-    }
-
-    function getDisabled() {
         return unfinishedTasks.length >= 5;
     }
 
@@ -56,10 +52,10 @@ function App() {
                 text={text}
                 onChangeText={onChangeText}
                 onClickAdd={onClickAdd}
-                disabled={getDisabled()}
+                disabled={unfinishedTasks.length >= 5}
             />
 
-            {getDisabled() && (
+            {unfinishedTasks.length >= 5 && (
                 <p className={"text-red-500 ml-20 mb-10 text-4xl"}>
                     Max tasks is 5:
                 </p>
