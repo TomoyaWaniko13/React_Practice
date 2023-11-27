@@ -1,16 +1,25 @@
 import {Card} from "./Card";
+import {robots} from "../robots";
 
-export const CardList = () =>{
+export const CardList = (robots) => {
+
     return(
-        <div className="App flex flex-wrap justify-center">
-            <Card name={"Neko"} email={"kevin@gmail.com"} />
-            <Card name={"Neko"} email={"james@gmail.com"}/>
-            <Card name={"Neko"} email={"paul@gmail.com"}/>
-            <Card name={"Neko"} email={"vwefae@gmail.com"}/>
-            <Card name={"Neko"} email={"kevnfafa@gmail.com"}/>
-            <Card name={"Neko"} email={"faijgareo@gmail.com"}/>
-            <Card name={"Neko"} email={"fajojjteait@gmail.com"}/>
-            <Card name={"Neko"} email={"ffafdafeafaotjeoreorjeoj@gmail.com"}/>
-        </div>
+        {robots.map(user,index) => {
+
+    }}
     )
+
+    // return (
+    //     <div className="App flex flex-wrap justify-center">
+    //
+    //         <Card id={1} name={"Neko"} email={"kevin@gmail.com"}/>
+    //         <Card id={2} name={"Neko"} email={"james@gmail.com"}/>
+    //         <Card id={3} name={"Neko"} email={"paul@gmail.com"}/>
+    //         <Card id={4} name={"Neko"} email={"vwefae@gmail.com"}/>
+    //         <Card id={5} name={"Neko"} email={"kevnfafa@gmail.com"}/>
+    //         <Card id={6} name={"Neko"} email={"faijgareo@gmail.com"}/>
+    //         <Card id={7} name={"Neko"} email={"fajojjteait@gmail.com"}/>
+    //         <Card id={8} name={"Neko"} email={"ffafdafeafaotjeoreorjeoj@gmail.com"}/>
+    //     </div>
+    // )
 }
