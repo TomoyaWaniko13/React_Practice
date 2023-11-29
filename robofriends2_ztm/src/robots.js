@@ -35,8 +35,8 @@ export const robots = [
         email: "email 7"
     },
     {
-        id: 7,
-        name: "Neko 7",
-        email: "email 7"
+        id: 8,
+        name: "Neko 8",
+        email: "email 8"
     },
 ]
