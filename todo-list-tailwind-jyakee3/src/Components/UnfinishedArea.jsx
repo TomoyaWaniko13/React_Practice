@@ -1,8 +1,4 @@
-import {useState} from "react";
-
-
-export const UnfinishedArea = () => {
-    const [unfinishedTasks, setUnfinishedTasks] = useState(["Task 1 neko san", "Task 2 Neko san"])
+export const UnfinishedArea = ({unfinishedTasks, setUnfinishedTasks}) => {
     return (
         <>
             <div>
@@ -11,16 +7,16 @@ export const UnfinishedArea = () => {
                 <ul>
                     {unfinishedTasks.map((task) => {
                         return (
-                            <li>
-                                <div className={"flex items-center"}>
-                                    <p className={"mx-10 text-2xl font-semibold"}>{task}</p>
-                                    <button
-                                        className={"border-2 border-black text-2xl p-5 m-2  rounded-3xl hover:bg-black hover:text-white"}>Done
-                                    </button>
-                                    <button
-                                        className={"border-2 border-black text-2xl p-5 m-2  rounded-3xl hover:bg-black hover:text-white"}>Delete
-                                    </button>
-                                </div>
+                            <li className={"flex items-center"} key={task}>
+                                <p className={"mx-10 text-2xl font-semibold"}>{task}</p>
+                                <button className={"border-2 border-black text-2xl p-5 m-2  rounded-3xl " +
+                                        "hover:bg-black hover:text-white"}>
+                                    Done
+                                </button>
+                                <button className={"border-2 border-black text-2xl p-5 m-2  rounded-3xl " +
+                                        "hover:bg-black hover:text-white"}>
+                                    Delete
+                                </button>
                             </li>
                         )
                     })}

@@ -1,4 +1,6 @@
-export const InputArea = () => {
+export const InputArea = ({text, onChange, onClick}) => {
+
+
     return (
         <div className={"text-center"}>
             <input type="text" placeholder={"Enter your tasks:"}
