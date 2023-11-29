@@ -1,4 +1,4 @@
-export const UnfinishedArea = ({unfinishedTasks, setUnfinishedTasks}) => {
+export const UnfinishedArea = ({unfinishedTasks}) => {
     return (
         <>
             <div>
