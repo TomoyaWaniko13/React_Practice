@@ -9,7 +9,7 @@ export const Width = () => {
 
     return (
         <>
-            <p id={"width"}></p>
+            <p id={"width"} className={"text-white"}></p>
         </>
     )
 }

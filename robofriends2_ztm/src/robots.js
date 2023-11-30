@@ -41,12 +41,12 @@ export const robots = [
     },
     {
         id: 9,
-        name: "Bakemono Neko 8",
-        email: "email 8"
+        name: "Bakemono Neko 9",
+        email: "email 9"
     },
     {
         id: 10,
-        name: "Big Neko 8",
-        email: "email 8"
+        name: "Big Neko 10",
+        email: "email 10"
     },
 ]
