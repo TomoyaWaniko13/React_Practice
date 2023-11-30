@@ -51,7 +51,7 @@ export const App = () => {
     }
 
     //Todo fix isUpperLimit
-    const isUpperLimit = () => unfinishedTasks.length >= 5;
+    const isUpperLimit =  unfinishedTasks.length >= 5;
 
     return (
         <div>
