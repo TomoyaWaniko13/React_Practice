@@ -3355,7 +3355,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          this.log.error("Using removed Babel 5 option: " + alias + "." + _key2 + " - " + _removed2.default[_key2].message, ReferenceError);
 	        } else {
 	          var unknownOptErr = "Unknown option: " + alias + "." + _key2 + ". Check out http://babeljs.io/docs/usage/options/ for more information about options.";
-	          var presetConfigErr = "A common cause of this error is the presence of a configuration options object without the corresponding preset name. Example:\n\nInvalid:\n  `{ presets: [{option: value}] }`\nValid:\n  `{ presets: [['presetName', {option: value}]] }`\n\nFor more detailed information on preset configuration, please see http://babeljs.io/docs/plugins/#pluginpresets-options.";
+	          var presetConfigErr = "A common cause of this error is the presence of a configuration options object without the corresponding preset name. Child:\n\nInvalid:\n  `{ presets: [{option: value}] }`\nValid:\n  `{ presets: [['presetName', {option: value}]] }`\n\nFor more detailed information on preset configuration, please see http://babeljs.io/docs/plugins/#pluginpresets-options.";
 
 	          this.log.error(unknownOptErr + "\n\n" + presetConfigErr, ReferenceError);
 	        }
@@ -48154,7 +48154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	Object.defineProperty(exports, 'mapFileCommentRegex', {
 	  get: function getMapFileCommentRegex() {
-	    //Example (Extra space between slashes added to solve Safari bug. Exclude space in production):
+	    //Child (Extra space between slashes added to solve Safari bug. Exclude space in production):
 	    //     / /# sourceMappingURL=foo.js.map           /*# sourceMappingURL=foo.js.map */
 	    return (/(?:\/\/[@#][ \t]+sourceMappingURL=([^\s'"]+?)[ \t]*$)|(?:\/\*[@#][ \t]+sourceMappingURL=([^\*]+?)[ \t]*(?:\*\/){1}[ \t]*$)/mg
 	    );
@@ -59169,7 +59169,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // If the number is not octal format and starts with zero (e.g. `091`)
 	      // then only the zeros `0` is treated here and the `91` are ordinary
 	      // characters.
-	      // Example:
+	      // Child:
 	      //   /\091/.exec('\091')[0].length === 3
 	      else if (res = matchReg(/^[0-7]{1,3}/)) {
 	          match = res[0];

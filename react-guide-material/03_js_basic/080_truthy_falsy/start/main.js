@@ -13,27 +13,38 @@ NaN (Not a Number)
 
 const a = 0;
 let result = a ? 10 : -10;
-console.log(result);
+console.log(result); // -10
 
-const falsy = 0;
-const truthy = 1;
-console.log(Boolean(truthy));
-console.log(Boolean(falsy));
 
-// 論理積 (&&) について
-const resultA = "" && "foo";
-const resultB = 2 && 1 && 0 && 3;
-const resultC = "foo" && 4;
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+let falseObject1 = Boolean(false); // without a new keyword
+console.log(falseObject1); // false
+console.log(Boolean(falseObject1)); // false
 
-// console.log(resultA);
-// console.log(resultB);
-// console.log(resultC);
 
-// 理論和 (||) について
-const resultD = "" || "foo";
-const resultE = 0 || 2 || 0;
-const resultF = "foo" || 4;
+let falseObject2 = new Boolean(false);  // with a new keyword (it should not be used.)
+console.log(falseObject2); // [Boolean: false]
+console.log(Boolean(falseObject2)); // true
+console.log();
 
+console.log(Boolean(0)); // false
+console.log(Boolean(1)); // true
+console.log();
+
+// Logical AND (&&) the operator returns the value of the first falsy
+const resultA = '' && 'foo'; //
+console.log(resultA);
+const resultB = 2 && 0; // 0
+console.log(resultB);
+const resultC = 'foo' && 4; // 4
+console.log(resultC);
+console.log();
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR
+//
+const resultD = '' || 'foo'; // foo
 console.log(resultD);
+const resultE = 2 || 0; // 2
 console.log(resultE);
+const resultF = 'foo' || 4; // foo
 console.log(resultF);

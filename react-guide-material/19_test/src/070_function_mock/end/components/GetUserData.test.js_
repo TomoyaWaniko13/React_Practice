@@ -1,7 +1,7 @@
 // POINT 外部APIのモック化の手法について学ぼう
 import { render, screen } from "@testing-library/react";
 import GetUserData from "./GetUserData";
-import { ENDPOINT_URL } from "../Example";
+import { ENDPOINT_URL } from "../Child";
 import axios from "axios";
 
 jest.mock('axios')

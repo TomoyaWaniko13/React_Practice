@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
+    <script src="/libs/react.development.js"></script>
+    <script src="/libs/react-dom.development.js"></script>
+    <script src="/libs/babel-standalone.js"></script>
 </head>
 <body>
-    
+<div id="app"></div>
+<script type="text/babel">
+    const appElement = document.querySelector('#app');
+    const root = ReactDOM.createRoot(appElement);
+
+    // function Child() {
+    //     return <h1>Hello Components</h1>
+    // }
+
+    // const Child = () =>{
+    //     return <h1>Hello Components!</h1>
+    // }
+    // const Child = () => {
+    //     return (
+    //         <div>
+    //             <h1>Hello Components!</h1>
+    //         </div>
+    //     );
+    // }
+    const Child = () => (
+        <div>
+            <h1>Hello Components</h1>
+        </div>
+    );
+
+    root.render(<Example/>)
+</script>
 </body>
 </html>

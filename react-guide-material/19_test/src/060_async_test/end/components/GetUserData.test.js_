@@ -1,7 +1,7 @@
 // POINT 非同期のテストコードの書き方
 import { render, screen } from "@testing-library/react";
 import GetUserData from "./GetUserData";
-import { ENDPOINT_URL } from "../Example";
+import { ENDPOINT_URL } from "../Child";
 
 describe('GetUserDataコンポーネントの動作確認', () => {
   test('外部データ取得中', () => {

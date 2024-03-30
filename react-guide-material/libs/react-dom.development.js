@@ -29270,7 +29270,7 @@
           warn('hydrate through createRoot is deprecated. Use ReactDOMClient.hydrateRoot(container, <App />) instead.');
         } else {
           if (typeof options === 'object' && options !== null && options.$$typeof === REACT_ELEMENT_TYPE) {
-            error('You passed a JSX element to createRoot. You probably meant to ' + 'call root.render instead. ' + 'Example usage:\n\n' + '  let root = createRoot(domContainer);\n' + '  root.render(<App />);');
+            error('You passed a JSX element to createRoot. You probably meant to ' + 'call root.render instead. ' + 'Child usage:\n\n' + '  let root = createRoot(domContainer);\n' + '  root.render(<App />);');
           }
         }
       }
@@ -29319,7 +29319,7 @@
 
     {
       if (initialChildren === undefined) {
-        error('Must provide initial children as second argument to hydrateRoot. ' + 'Example usage: hydrateRoot(domContainer, <App />)');
+        error('Must provide initial children as second argument to hydrateRoot. ' + 'Child usage: hydrateRoot(domContainer, <App />)');
       }
     } // For now we reuse the whole bag of options since they contain
     // the hydration callbacks.

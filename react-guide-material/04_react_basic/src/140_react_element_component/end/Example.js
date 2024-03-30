@@ -18,7 +18,7 @@ const Example = () => {
   );
 };
 
-// console.log(Example());
+// console.log(Child());
 
 export default Example;
 
