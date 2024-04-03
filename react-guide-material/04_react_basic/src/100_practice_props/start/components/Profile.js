@@ -1,11 +1,14 @@
 import "./Profile.css";
 
-const Profile = (props) => {
-  return (
-    <div className="profile">
+const Profile = ({name = 'John Doe', age = '??', country = 'Japan'}) => {
 
-    </div>
-  );
+    return (
+        <div className="profile">
+            <h3>Name: {name}</h3>
+            <p>Age: {age}</p>
+            <p>From: {country}</p>
+        </div>
+    );
 };
 
 
