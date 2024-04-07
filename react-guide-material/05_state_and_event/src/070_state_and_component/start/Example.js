@@ -3,6 +3,7 @@ import {useState} from "react";
 const Example = () => {
     const [toggle, setToggle] = useState(true);
 
+
     const toggleComponent = () => {
         setToggle(prevState => !prevState);
     }
