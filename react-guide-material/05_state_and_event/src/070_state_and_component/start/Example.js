@@ -1,40 +1,36 @@
-import {useState} from 'react';
+import {useState} from "react";
 
 const Example = () => {
-
     const [toggle, setToggle] = useState(true);
-    const changeToggleValue = () => {
+
+    const toggleComponent = () => {
         setToggle(prevState => !prevState);
     }
 
     return (
         <>
-            <button onClick={changeToggleValue}>Toggle!!</button>
-            {toggle ? <Count key={'A'} title={'A'}/> : <Count key={'B'} title={'B'}/>}
-
-            {/*{toggle ? <Count title={'true'}/> : <div><Count title={'false'}/></div>}*/}
-
-            {/*<Count title={'A'}/>*/}
-            {/*{toggle && <Count title={'B'}/>}*/}
+            <button onClick={toggleComponent}>Toggle</button>
+            {/*{toggle ? <Count key={'A'} title={'A'}/> : <Count key={'B'} title={'B'}/>}*/}
+            <Count title={'A'}/>
+            {toggle && <Count title={'B'}/>}
         </>
-    )
-}
+    );
+};
 
 const Count = ({title}) => {
-    const [count, setCount] = useState();
+    const [count, setCount] = useState(0);
 
-    const countUp = () => {
+    const incrementCount = () => {
         setCount(prevState => prevState + 1);
-    }
-    const countDown = () => {
+    };
+    const decrementCount = () => {
         setCount(prevState => prevState - 1);
-    }
-
+    };
     return (
         <>
-            <h3>{title}: {count}</h3>
-            <button onClick={countUp}>+</button>
-            <button onClick={countDown}>-</button>
+            <h3>{title} : {count}</h3>
+            <button onClick={incrementCount}>+</button>
+            <button onClick={decrementCount}>-</button>
         </>
     );
 };
