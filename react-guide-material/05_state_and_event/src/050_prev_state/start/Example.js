@@ -1,23 +1,25 @@
-import { useState } from "react";
+import {useState} from "react";
 
 const Example = () => {
-    const [count,setCount] = useState(0);
-    const countUp = () =>{
-        setCount(count + 1);
+    console.log('re-rendered.');
+    const [count, setCount] = useState(0);
+
+    const incrementCount = () => {
+        // setCount(count + 1);
         // setCount(count + 1);
         setCount(prevState => prevState + 1);
-
+        setCount(prevState => prevState + 1);
         console.log(count);
     }
-    const countDown = () =>{
+    const decrementCount = () => {
         setCount(count - 1);
     }
 
     return (
         <>
-            <p>Counts: {count}</p>
-            <button onClick={countUp}>+</button>
-            <button onClick={countDown}>-</button>
+            <p>number of times the Button A pressed: {count}</p>
+            <button onClick={incrementCount}>+</button>
+            <button onClick={decrementCount}>-</button>
         </>
     );
 };
