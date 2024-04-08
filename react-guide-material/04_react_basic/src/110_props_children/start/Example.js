@@ -1,47 +1,50 @@
+// import Container from './components/Container';
+// import Profile from "./components/Profile";
+//
+// const profile = [
+//     {name: 'Neko san', age: 2, country: 'AO'},
+//     {name: 'Basic Neko san', age: 22, country: 'MT'}
+// ];
+//
+//
+// const Example = () => {
+//     return (
+//         <div>
+//             <Container title={'What is container?'}>
+//                 <Profile {...profile[0] } />
+//                 <Profile {...profile[1] } />
+//             </Container>
+//         </div>
+//     );
+// };
+//
+//
+// export default Example;
+
+
 import Container from './components/Container';
 import Profile from "./components/Profile";
 
-const profileArray = [
-    {name: "Takashi", age: 19, country: "JP", color: 'green'},
-    {name: "Jane", age: 28, country: "UK", color: 'blue'}
+const profile = [
+    {name: 'Neko san', age: 2, country: 'AO'},
+    {name: 'Basic Neko san', age: 22, country: 'MT'}
 ];
 
-// const Example = () => {
-//     return (
-//         <div>
-//             <Container title={'What is container?'}>
-//                 {'children here!!!'}
-//             </Container>
-//         </div>
-//     )
-// };
-
-// const Example = () => {
-//     return (
-//         <div>
-//             <Container title={'What is container?'}>
-//                 <Profile {...profileArray[0]}/>
-//                 <Profile {...profileArray[1]}/>
-//             </Container>
-//         </div>
-//     )
-// };
 
 const Example = () => {
     return (
         <div>
-            <Container title={'What is container?'}
-                       children={
-                           [
-                               <Profile key={profileArray[0].name} {...profileArray[0]} />,
-                               <Profile key={profileArray[0].name} {...profileArray[1]} />
-                           ]
-                       }
-                       first={<Profile key={profileArray[0].name} {...profileArray[0]} />}
-                       second={<Profile key={profileArray[1].name} {...profileArray[1]} />}
-            />
+            <Container title={'What is container?'} children={
+                [
+                    <Profile key={profile[0].name} {...profile[0]}/>,
+                    <Profile key={profile[1].name} {...profile[1]}/>
+                ]
+            }>
+
+            </Container>
         </div>
     );
 };
+
 
 export default Example;

@@ -7,8 +7,8 @@ const Example = () => {
     animalList.push(<li>{animal}</li>);
   }
 
-  const helloAnimals = animals.map((animal) => {
-    return <li>Hello {animal}</li>;
+  const helloAnimals = animals.map((animalElement) => {
+    return <li>Hello {animalElement}</li>;
   });
 
   return (
@@ -21,7 +21,7 @@ const Example = () => {
         {helloAnimals} */}
         {/* {animalList} */}
 
-        {animals.map((animal) => <li>Hello, {animal}</li>)}
+        {animals.map((animalElement) => <li key={animalElement}>Hello, {animalElement}</li>)}
       </ul>
     </>
   );

@@ -1,37 +1,38 @@
 import Profile from "./components/Profile";
+import {useState} from "react";
 
 const persons = [
-  {
-    name: "Geo",
-    age: 18,
-    hobbies: ["sports", "music"],
-  },
-  {
-    name: "Tom",
-    age: 25,
-    hobbies: ["movie", "music"],
-  },
-  {
-    name: "Lisa",
-    age: 21,
-    hobbies: ["sports", "travel", "game"],
-  },
+    {
+        name: "Geo",
+        age: 18,
+        hobbies: ["sports", "music"],
+    },
+    {
+        name: "Tom",
+        age: 25,
+        hobbies: ["movie", "music"],
+    },
+    {
+        name: "Lisa",
+        age: 21,
+        hobbies: ["sports", "travel", "game"],
+    },
 ];
 
 const Example = () => {
-  return (
-    <>
-      <h3>練習問題</h3>
-      <p>入力欄を設置して、入力値と名前が一致したもののみ表示する仕組みを作成してください。</p>
-      <ul>
-        {persons.map((person) => (
-          <li key={person.name}>
-            <Profile {...person} />
-          </li>
-        ))}
-      </ul>
-    </>
-  );
+    const [query, setQuery] = useState('');
+
+    const filteredPersons
+        = persons.filter(person => person.name.indexOf(query) !== -1).map(person => <li key={person.name}><Profile {...person}/></li>)
+
+    return (
+        <>
+            <input type="text" value={query} onChange={e => setQuery(e.target.value)}/>
+            <ul>
+                {filteredPersons}
+            </ul>
+        </>
+    );
 };
 
 export default Example;
