@@ -6,19 +6,44 @@ export default function TodoList() {
     const unOrderedListClass = 'list-disc m-4';
     const grayBorderClass = 'border-2 border-b-gray-600 rounded-lg p-2 m-3'
 
-    const [inputtedTodoString, setInputtedTodoString] = useState('');
-    const [incompleteTodosArray, setIncompleteTodosArray] = useState(['Todo A', 'Todo B', 'Todo C']);
-    const [completeTodosArray, setCompleteTodosArray] = useState(['Todo R', 'Todo S', 'Todo T']);
+    const [inputtedTodo, setInputtedTodo] = useState('');
+    const [uncompletedTodos, setUncompletedTodos] = useState(['Todo A', 'Todo B', 'Todo C']);
+    const [completedTodos, setCompletedTodos] = useState(['Todo R', 'Todo S', 'Todo T']);
 
-    const onChangeInputArea = (e) => setInputtedTodoString(e.target.value);
-    const onClickAddTodo = () => {
-        if (inputtedTodoString === '') return;
-
-        // combine inputtedTodoString with incompleteTodosArray elements and copy it.
-        const newTodosArray = [...incompleteTodosArray, inputtedTodoString];
-        setIncompleteTodosArray(newTodosArray);
+    const onChangeInputArea = (e) => {
+        setInputtedTodo(e.target.value);
     }
 
+    const onClickAddHandler = () => {
+        if (inputtedTodo === '') return;
+
+        const newTodos = [...uncompletedTodos, inputtedTodo];
+        setUncompletedTodos(newTodos);
+        setInputtedTodo('');
+    };
+
+    const onClickCompleteHandler = (index) => {
+        const newUncompletedTodos = [...uncompletedTodos];
+        const removedTodo = newUncompletedTodos.splice(index, 1)[0];
+
+        setUncompletedTodos(newUncompletedTodos);
+        setCompletedTodos([...completedTodos, removedTodo]);
+    };
+
+    const onClickDeleteHandler = (index) => {
+        const newUncompletedTodos = [...uncompletedTodos];
+        newUncompletedTodos.splice(index, 1);
+
+        setUncompletedTodos(newUncompletedTodos);
+    }
+
+    const onClickUndoHandler = (index) => {
+        const newCompletedTodos = [...completedTodos];
+        const removedTodo = newCompletedTodos.splice(index, 1)[0];
+
+        setCompletedTodos(newCompletedTodos);
+        setUncompletedTodos([...uncompletedTodos, removedTodo]);
+    }
 
     return (
         <div className={'box-sizing: border-box m-5'}>
@@ -27,19 +52,27 @@ export default function TodoList() {
                        className="bg-gray-50 border border-gray-500 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5  m-3 w-1/3"
                        placeholder="Please enter you new taksks."
                        required
+                       value={inputtedTodo}
                        onChange={onChangeInputArea}
                 />
-                <button type="button" className={blueButtonClass} onClick={onClickAddTodo}>Add</button>
+                <button type="button" className={blueButtonClass} onClick={onClickAddHandler}>Add</button>
             </div>
             <div className={grayBorderClass}>
-                <h2 className={'font-bold m-3 text-xl '}>Unfinished Tasks:</h2>
+                <h2 className={'font-bold m-3 text-xl '}>Uncompleted Todos:</h2>
                 <ul className={unOrderedListClass}>
-                    {incompleteTodosArray.map(incompleteTask => {
+                    {uncompletedTodos.map((uncompletedTaskTask, index) => {
                             return (
-                                <li key={incompleteTask}>
-                                    <p className={'my-2'}>{incompleteTask}</p>
-                                    <button type="button" className={blueButtonClass}>Task completed</button>
-                                    <button type="button" className={redButtonClass}>Delete</button>
+                                <li key={uncompletedTaskTask}>
+                                    <p className={'my-2'}>{uncompletedTaskTask}</p>
+                                    <button type="button" className={blueButtonClass}
+                                            onClick={() => onClickCompleteHandler(index)}
+                                    >
+                                        Task completed
+                                    </button>
+                                    <button type="button" className={redButtonClass}
+                                            onClick={() => onClickDeleteHandler(index)}>
+                                        Delete
+                                    </button>
                                 </li>
                             );
                         }
@@ -47,14 +80,19 @@ export default function TodoList() {
                 </ul>
             </div>
             <div className={grayBorderClass}>
-                <h2 className={'font-bold m-3 text-xl'}>Finished Tasks:</h2>
+                <h2 className={'font-bold m-3 text-xl'}>Completed Todos:</h2>
 
                 <ul className={unOrderedListClass}>
-                    {completeTodosArray.map(completeTask => {
+                    {completedTodos.map((completeTask, index) => {
                             return (
                                 <li key={completeTask}>
                                     <p className={'my-2'}>{completeTask}</p>
-                                    <button className={blueButtonClass}>Undo</button>
+                                    <button
+                                        className={blueButtonClass}
+                                        onClick={() => onClickUndoHandler(index)}
+                                    >
+                                        Undo
+                                    </button>
                                 </li>
                             )
                         }
