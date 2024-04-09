@@ -41,9 +41,10 @@ const Example = () => {
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
         // To sum up the values contained in an array of objects, you MUST supply an initialValue,
         // so that each item passes through your function.
+
         let newPriceSum = updatedFruitObjectArray
             .filter(fruitObject => fruitObject.checked)
-            .reduce((newPriceSum, fruitObject) => newPriceSum + fruitObject.price, 0);
+            .reduce((accumulator, fruitObject) => accumulator + fruitObject.price, 0);
 
         setPriceSum(newPriceSum);
     }
