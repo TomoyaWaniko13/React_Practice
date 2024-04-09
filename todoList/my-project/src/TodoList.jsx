@@ -6,14 +6,17 @@ export default function TodoList() {
     const unOrderedListClass = 'list-disc m-4';
     const grayBorderClass = 'border-2 border-b-gray-600 rounded-lg p-2 m-3'
 
-    const [inputTodo, setInputTodo] = useState('');
+    const [inputtedTodoString, setInputtedTodoString] = useState('');
     const [incompleteTodosArray, setIncompleteTodosArray] = useState(['Todo A', 'Todo B', 'Todo C']);
     const [completeTodosArray, setCompleteTodosArray] = useState(['Todo R', 'Todo S', 'Todo T']);
 
-    const onChangeInputArea = (e) => setInputTodo(e.target.value);
-    const onClickAddTodo = (e) => {
-        const newTodosArray = [...incompleteTodosArray, ];
+    const onChangeInputArea = (e) => setInputtedTodoString(e.target.value);
+    const onClickAddTodo = () => {
+        if (inputtedTodoString === '') return;
 
+        // combine inputtedTodoString with incompleteTodosArray elements and copy it.
+        const newTodosArray = [...incompleteTodosArray, inputtedTodoString];
+        setIncompleteTodosArray(newTodosArray);
     }
 
 
@@ -26,7 +29,7 @@ export default function TodoList() {
                        required
                        onChange={onChangeInputArea}
                 />
-                <button type="button" className={blueButtonClass} onChange={onClickAddTodo}>Add</button>
+                <button type="button" className={blueButtonClass} onClick={onClickAddTodo}>Add</button>
             </div>
             <div className={grayBorderClass}>
                 <h2 className={'font-bold m-3 text-xl '}>Unfinished Tasks:</h2>
