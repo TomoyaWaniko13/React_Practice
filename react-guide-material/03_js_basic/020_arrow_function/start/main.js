@@ -23,8 +23,33 @@
 // }
 
 
-const array1 = ['a', 'b', 'c'];
+// const array1 = ['a', 'b', 'c'];
+//
+// for (const string of array1) {
+//     console.log(string);
+// }
 
-for (const string of array1) {
-    console.log(string);
-}
+// const numbersArray = [1, 4, 9];
+//
+// const rootsArray = numbersArray.map((num) => {
+//         return Math.sqrt(num);
+//     }
+// );
+// console.log(rootsArray);
+//
+// const rootsArray2 = numbersArray.map(num => Math.sqrt(num));
+// console.log(rootsArray2);
+
+
+// const numbersArray = [1, 3, 10, 20];
+//
+// const sum = numbersArray.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// })
+//
+// console.log(sum);
+
+const objectsArray = [{x: 1}, {x: 2}, {x: 3}];
+const sum
+    = objectsArray.reduce((accumulator, currentObject) => accumulator + currentObject.x,0);
+console.log(sum);
