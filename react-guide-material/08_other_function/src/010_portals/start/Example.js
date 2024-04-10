@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { createPortal } from "react-dom";
+import {useState} from "react";
 import Modal from "./components/Modal";
+import {createPortal} from "react-dom";
 
 /* POINT createPortalの使い方
 第一引数: React の子要素としてレンダー可能なもの （要素、文字列、フラグメント、コンポーネントなど）
@@ -14,22 +14,30 @@ import Modal from "./components/Modal";
 モーダル、ポップアップ、トーストは使用の代表例です。
 */
 
-const Example = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  return (
-    <div>
-      <div className="container start"></div>
+const ModalPortal = ({children}) => {
+    const domNode = document.querySelector('.container.start');
+    return createPortal(children, domNode);
+}
 
-      <button
-        type="button"
-        onClick={() => setModalOpen(true)}
-        disabled={modalOpen}
-      >
-        モーダルを表示する
-      </button>
-      {modalOpen && <Modal handleCloseClick={() => setModalOpen(false)} />}
-    </div>
-  );
+
+const Example = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+    return (
+        <div>
+            <div className="container start"></div>
+
+            <button
+                type="button"
+                onClick={() => setModalOpen(true)}
+                disabled={modalOpen}
+            >
+                モーダルを表示する
+            </button>
+            {/*{modalOpen && <Modal handleCloseClick={() => setModalOpen(false)}/>}*/}
+            {modalOpen && (<ModalPortal><Modal handleCloseClick={() => setModalOpen(false)}/></ModalPortal>)}
+
+        </div>
+    );
 };
 
 export default Example;
