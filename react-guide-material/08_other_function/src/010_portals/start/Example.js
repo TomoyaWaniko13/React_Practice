@@ -23,8 +23,8 @@ const ModalPortal = ({children}) => {
 const Example = () => {
     const [modalOpen, setModalOpen] = useState(false);
     return (
-        <div>
-            <div className="container start"></div>
+        <div onClick={() => console.log('empty div on click')}>
+            <div className="container start" onClick={() => console.log('.container on click')}></div>
 
             <button
                 type="button"
@@ -35,7 +35,6 @@ const Example = () => {
             </button>
             {/*{modalOpen && <Modal handleCloseClick={() => setModalOpen(false)}/>}*/}
             {modalOpen && (<ModalPortal><Modal handleCloseClick={() => setModalOpen(false)}/></ModalPortal>)}
-
         </div>
     );
 };
