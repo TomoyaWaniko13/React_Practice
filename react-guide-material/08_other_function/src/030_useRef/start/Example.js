@@ -1,61 +1,67 @@
-import {useCallback, useRef, useState} from "react";
+import {useRef, useState} from "react";
 
-
-
+/* POINT useRefでDOMを取得
+refオブジェクトをref属性に渡すとDOMを参照することができます。
+*/
 const Case1 = () => {
     const [value, setValue] = useState("");
     const inputRef = useRef();
-    // inputRef.current contains a HTML element.
-    console.dir(inputRef);
+
+    // console.log(inputRef);
+
     return (
         <div>
             <h3>ユースケース1</h3>
-            <input type="text" ref={inputRef} value={value} onChange={(e) => setValue(e.target.value)}/>
+            <input
+                type="text"
+                ref={inputRef}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+            />
             <button onClick={() => inputRef.current.focus()}>
                 インプット要素をフォーカスする
             </button>
-
         </div>
     );
 };
 
+// POINT 動画の再生・停止を制御
 const Case2 = () => {
-
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [playing, setPlaying] = useState(false);
     const videoRef = useRef();
-
-    const onButtonClick = useCallback((event) => {
-        if (isPlaying) { // if true
-            videoRef.current.pause();
-        } else {
-            videoRef.current.play();
-        }
-
-        setIsPlaying(prev => !prev);
-
-    }, []);
 
     return (
         <div>
-            <video style={{maxWidth: "300px"}} ref={videoRef}>
-                <source src="./sample.mp4"/>
+            <h3>ユースケース2</h3>
+            <video style={{maxWidth: "100%"}} ref={videoRef}>
+                <source src="./sample.mp4"></source>
             </video>
-            <button onClick={onButtonClick}>
-                {isPlaying ? 'pause' : 'play'}
+            <button
+                onClick={() => {
+                    if (playing) {
+                        videoRef.current.pause();
+                    } else {
+                        videoRef.current.play();
+                    }
+
+                    setPlaying((prev) => !prev);
+                }}
+            >
+                {playing ? "Stop" : "Play"}
             </button>
         </div>
     );
 };
 
-
-/*
-    1.再レンダリングされても情報が保存される.(通常の変数はレンダリングの時初期化される。)
-    2.refの値を変更しても再レンダリングされない。
-    3.ref objectをJSXに渡すとそのDOMにアクセスできる。(よく使う)
-*/
 const getCurrentTimeString = () => new Date().toTimeString();
 
+/* POINT useRefは再レンダリングされません。
+書き換え可能な情報としてコンポーネントに保持させておくことができます。
+state は更新されるごとに再レンダーされますが、refオブジェクトの中身が変わっても再レンダーが走ることはありません。
+*/
 const Case3 = () => {
+    console.log('re-rendered.');
+
     const [currentTimeString, setCurrentTimeString] = useState(getCurrentTimeString());
     const ref = useRef(getCurrentTimeString());
 
@@ -68,21 +74,32 @@ const Case3 = () => {
         ref.current = getCurrentTimeString();
         console.log("ref.current -> ", ref.current);
     };
-
     return (
         <div>
+            <h3>ユースケース3</h3>
             <p>
                 state: {currentTimeString}
-                <button onClick={updateState}>updateState()</button>
+                <button onClick={updateState}>updateState() causes this component to re-render.</button>
             </p>
             <p>
                 ref: {ref.current}
-                <button onClick={updateRef}>updateRef()</button>
+                <button onClick={updateRef}>updateRef() updates the value of ref,
+                    but doesn't cause this component to re-render.
+                </button>
             </p>
         </div>
     );
 };
 
+/* POINT refを使うべきタイミング
+Reactは一般的に、propsを通して親から子へ作用させる、というデータフローが原則です。
+refを使ってコンポーネントに作用を起こすことは、その原則を崩す行為なので多用は避けましょう。
+
+refに適した使用例は以下の場合とされています。
+- フォームへのフォーカス、テキストの選択、メディア（動画・音声）の再生の管理
+- アニメーションの発火
+- サードパーティの DOM や、React管理外のDOMの埋め込み
+*/
 const Example = () => {
     return (
         <>
