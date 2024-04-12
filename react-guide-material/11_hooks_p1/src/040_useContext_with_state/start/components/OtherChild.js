@@ -1,19 +1,19 @@
-import { useState } from "react";
+import {MyContext} from "../Example";
+import {useCallback, useContext, useState} from "react";
 
 const OtherChild = () => {
-  const [ value, setValue ] = useState(0);
+    const [,setState] = useContext(MyContext);
 
-  const clickHandler = (e) => {
-    setValue((prev) => prev + 1);
-  };
+    const onButtonClick = useCallback((event) => {
+        setState(prevState => ++prevState);
+    }, []);
 
-  return (
-    <div>
-      <h3>他の子コンポーネント</h3>
-      <button onClick={clickHandler}>+</button>
-      <h3>{value}</h3>
-    </div>
-  );
+    return (
+        <div style={{ border: "4px solid red" }}>
+            <h3>Other child</h3>
+            <button onClick={onButtonClick}>+</button>
+        </div>
+    );
 };
 
 export default OtherChild;

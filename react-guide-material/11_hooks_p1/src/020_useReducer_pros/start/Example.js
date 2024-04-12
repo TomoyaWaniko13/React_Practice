@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 
-// useState:状態の更新の仕方は利用側に託す。
-// useReducer:状態の更新の仕方も状態側で担当する。
+// useState:'状態の更新(= how to update a state)'の仕方は'利用側'(= those who call a setState())に託す。
+// useReducer:'状態の更新'(=how to update a state)の仕方も'状態側(= those who call a useReducer())'で担当する。
 
 // 状態と処理の分離
 // useState: コンポーネントで更新用の処理を保持
