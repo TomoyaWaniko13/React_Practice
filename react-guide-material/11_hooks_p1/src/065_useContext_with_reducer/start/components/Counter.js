@@ -1,12 +1,13 @@
 import CounterResult from "./CounterResult"
 import CounterButton from "./CounterButton"
 
-const Counter = ({ state, countUp, countDown }) => {
+// Counter() is a container of CounterResult() and CounterButton components.
+const Counter = () => {
     return (
         <>
-            <CounterResult state={state} />
-            <CounterButton step={2} calcType="+" onClick={countUp}/>
-            <CounterButton step={2} calcType="-" onClick={countDown}/>
+            <CounterResult/>
+            <CounterButton changeAmount={2} calcType="+"/>
+            <CounterButton changeAmount={2} calcType="-"/>
         </>
     )
 }
