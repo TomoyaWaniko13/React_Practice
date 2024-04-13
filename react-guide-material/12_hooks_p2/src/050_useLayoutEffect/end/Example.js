@@ -26,10 +26,10 @@ const Timer = () => {
       // console.log('end');
     }
   }, [])
-  
+
   useEffect(() => {
     // console.log('updated');
-    
+
     document.title = 'counter:' + time;
     window.localStorage.setItem('time-key-end', time);
 

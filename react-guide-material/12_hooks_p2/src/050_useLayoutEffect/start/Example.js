@@ -1,46 +1,55 @@
-import { useEffect, useState } from "react";
+import {useEffect, useLayoutEffect, useState} from "react";
+
 const Example = () => {
-  const [isDisp, setIsDisp] = useState(true);
+    const [isDisplayed, setIsDisplayed] = useState(true);
 
-  return (
-    <>
-      {isDisp && <Timer/>}
-      <button onClick={() => setIsDisp(prev => !prev)}>トグル</button>
-    </>
-  )
-}
+    return (
+        <>
+            {isDisplayed && <Timer/>}
+            <button onClick={() => setIsDisplayed(prevState => !prevState)}>
+                Toggle:
+            </button>
+        </>
+    );
+};
+
 const Timer = () => {
-  const [time, setTime] = useState(0);
+    const [time, setTime] = useState(0);
 
-  useEffect(() => {
-    // console.log('init');
-    let intervalId = null;
-    intervalId = window.setInterval(() => {
-      console.log('interval called');
-      setTime(prev => prev + 1);
-    }, 1000);
-    return () => {
-      window.clearInterval(intervalId)
-      // console.log('end');
-    }
-  }, [])
-  
-  useEffect(() => {
-    // console.log('updated');
-    
-    document.title = 'counter:' + time;
-    window.localStorage.setItem('time-key', time);
+    useEffect(
+        () => {
+            let intervalId = setInterval(() => {
+                setTime(prevTime => prevTime + 1);
+            }, 1000);
 
-    return () => {
-      // console.log('updated end');
-    }
-  }, [time]);
+            return () => {
+                clearInterval(intervalId);
+            };
+        },
+        []
+    );
 
-  return (
-    <h3>
-      <time>{time}</time>
-      <span>秒経過</span>
-    </h3>
+    useEffect(
+        () => {
+            document.title = 'counter' + time;
+            window.localStorage.setItem('time-key',time);
+        },
+        [time]
+    );
+
+    useLayoutEffect(
+        () => {
+            const storedTime = parseInt(window.localStorage.getItem('time-key'));
+            if (!isNaN(storedTime)) {
+                setTime(storedTime);
+            }
+        },
+        []);
+
+    return (
+        <h3>
+            <time>{time}</time>
+        </h3>
     );
 };
 

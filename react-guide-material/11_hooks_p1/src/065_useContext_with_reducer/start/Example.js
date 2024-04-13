@@ -1,14 +1,14 @@
 import Counter from "./components/Counter";
-import {CounterProvider} from "./context/CounterProvider";
+import {GlobalCounterProvider} from "./context/GlobalCounterProvider";
 
 // POINT useContext x useReducer
-const Example = () => {
 
+const Example = () => {
     return (
         <>
-            <CounterProvider>
+            <GlobalCounterProvider>
                 <Counter/>
-            </CounterProvider>
+            </GlobalCounterProvider>
         </>
     );
 };

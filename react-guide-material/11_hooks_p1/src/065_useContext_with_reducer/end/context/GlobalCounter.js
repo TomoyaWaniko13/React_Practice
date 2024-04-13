@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 
-const CounterContext = createContext();
+const GlobalCounter = createContext();
 const CounterDispatchContext = createContext();
 
 const CounterProvider = ({ children }) => {
@@ -15,16 +15,16 @@ const CounterProvider = ({ children }) => {
         }
       }, 0);
     return (
-        <CounterContext.Provider value={state}>
+        <GlobalCounter.Provider value={state}>
             <CounterDispatchContext.Provider value={dispatch}>
                 {children}
             </CounterDispatchContext.Provider>
-        </CounterContext.Provider>
+        </GlobalCounter.Provider>
     )
 }
 
 const useCounter = () => {
-    return useContext(CounterContext);
+    return useContext(GlobalCounter);
 }
 
 const useCounterDispatch = () => {

@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 
 const Example = () => {
   const [checked, setChecked] = useState(false);
+
+    useEffect(() => {
+        checked && window.alert('True!!')
+    }, [checked]);
 
   return (
     <>

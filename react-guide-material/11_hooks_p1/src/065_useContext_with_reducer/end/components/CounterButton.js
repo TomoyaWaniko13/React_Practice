@@ -1,4 +1,4 @@
-import { useCounterDispatch } from "../context/CounterContext";
+import { useCounterDispatch } from "../context/GlobalCounter";
 
 const CounterButton = ({calcType, step}) => {
     
