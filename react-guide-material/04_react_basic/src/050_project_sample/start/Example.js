@@ -1,9 +1,21 @@
+import {useEffect} from "react";
+
 const Example = () => {
-  return (
-    <div>
-      <h3>startフォルダのコード</h3>
-    </div>
-  );
+    function getOnClick() {
+        return event => console.log(event);
+    }
+
+    useEffect(() => {
+
+    }, []);
+    return (
+        <div>
+            <h3>start folder.</h3>
+            <button onClick={getOnClick()}>
+                Click me
+            </button>
+        </div>
+    );
 };
 
 export default Example;

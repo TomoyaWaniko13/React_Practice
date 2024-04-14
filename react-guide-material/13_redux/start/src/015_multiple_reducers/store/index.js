@@ -1,17 +1,35 @@
-import { createStore } from "redux";
+import {combineReducers, createStore} from 'redux'
 
-const initialState = 0;
-const reducer = (state = initialState, { type, step }) => {
+const initialState = 0
+const reducer = (state = initialState, {type, step}) => {
+    console.log(type);
     switch (type) {
-      case "+":
-        return state + step;
-      case "-":
-        return state - step;
-      default:
-        return state;
+        case 'counter/+':
+            return state + step
+        case 'counter/-':
+            return state - step
+        default:
+            return state
     }
-  };
+};
 
-export default createStore(
-    reducer
-);
+const reducer2 = (state = initialState, {type, step}) => {
+    console.log(type);
+    switch (type) {
+        case 'counter2/+':
+            return state + step
+        case 'counter2/-':
+            return state - step
+        default:
+            return state
+    }
+};
+
+
+
+const reducers = combineReducers({
+    counter: reducer,
+    counter2: reducer2
+});
+
+export default createStore(reducers)

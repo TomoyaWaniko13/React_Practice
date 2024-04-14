@@ -1,7 +1,7 @@
 import "./App.css";
 
-import Example from "./010_redux_no_rtk/Example";
-// import Child from "./015_multiple_reducers/Child";
+// import Example from "./010_redux_no_rtk/Example";
+import Example from "./015_multiple_reducers/Example";
 // import Child from "./020_actionCreator/Child";
 // import Child from "./030_redux_toolkit/Child";
 // import Child from "./040_immer/Child";
