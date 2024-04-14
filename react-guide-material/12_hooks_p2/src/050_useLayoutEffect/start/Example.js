@@ -1,4 +1,5 @@
 import {useEffect, useLayoutEffect, useState} from "react";
+import Random from "./Random";
 
 const Example = () => {
     const [isDisplayed, setIsDisplayed] = useState(true);
@@ -14,41 +15,36 @@ const Example = () => {
 };
 
 const Timer = () => {
+
     const [time, setTime] = useState(0);
 
-    useEffect(
-        () => {
-            let intervalId = setInterval(() => {
-                setTime(prevTime => prevTime + 1);
-            }, 1000);
+    useEffect(() => {
+        let intervalId = setInterval(() => {
+            setTime(prevTime => prevTime + 1);
+        }, 1000);
 
-            return () => {
-                clearInterval(intervalId);
-            };
-        },
-        []
-    );
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
 
-    useEffect(
-        () => {
-            document.title = 'counter' + time;
-            window.localStorage.setItem('time-key',time);
-        },
-        [time]
-    );
+    useEffect(() => {
+        document.title = time;
+        window.localStorage.setItem('time-key', time);
+    });
 
-    useLayoutEffect(
-        () => {
-            const storedTime = parseInt(window.localStorage.getItem('time-key'));
-            if (!isNaN(storedTime)) {
-                setTime(storedTime);
-            }
-        },
-        []);
+    useLayoutEffect(() => {
+        const storedTime = parseInt(window.localStorage.getItem('time-key'));
+        if (!isNaN(storedTime)) {
+            setTime(storedTime);
+        }
+
+    }, []);
 
     return (
         <h3>
             <time>{time}</time>
+            <Random/>
         </h3>
     );
 };
