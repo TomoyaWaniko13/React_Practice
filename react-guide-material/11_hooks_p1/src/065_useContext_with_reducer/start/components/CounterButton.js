@@ -1,17 +1,30 @@
-import {useDispatch} from "../context/GlobalCounterProvider";
+// import {useDispatch} from "../context/GlobalCounterProvider";
+//
+//
+// const CounterButton = ({calcType, changeAmount}) => {
+//
+//     const dispatch = useDispatch();
+//
+//     const onClickDispatcher = () => dispatch({type:calcType, changeAmount});
+//
+//     return (
+//         <button onClick={onClickDispatcher}>
+//             {calcType}{changeAmount}
+//         </button>
+//     );
+// };
+//
+// export default CounterButton;
 
-// CounterButton() modify the value of the state through setValue()
-// based on the value of the calcType and changeAmount props.
+import {useCounterDispatch} from "../context/GlobalCounterProvider";
 
 const CounterButton = ({calcType, changeAmount}) => {
-
-    const dispatch = useDispatch();
-
-    const onClickDispatcher = () => dispatch({type:calcType, changeAmount});
+    const dispatch = useCounterDispatch();
+    const onClickDispatcher = () => dispatch({calcType, changeAmount});
 
     return (
         <button onClick={onClickDispatcher}>
-            {calcType}{changeAmount}
+            {calcType} {changeAmount}
         </button>
     );
 };

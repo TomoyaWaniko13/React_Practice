@@ -5,58 +5,40 @@ const useTimer = () => {
     const [isRunning, setIsRunning] = useState(false);
 
     useEffect(() => {
-        // console.log('init');
+
         let intervalId = null;
-
         if (isRunning) {
-            // console.log('timer start');
-
             intervalId = window.setInterval(() => {
-                // console.log('interval running');
-                setTime(prev => prev + 1);
+                setTime(prevState => prevState + 1);
             }, 1000);
         }
 
         return () => {
-            window.clearInterval(intervalId)
-            // console.log('end');
-        }
-    }, [isRunning])
+            window.clearInterval(intervalId);
+        };
+    }, [isRunning]);
 
     useEffect(() => {
-        // // console.log('updated');
-
-        document.title = 'counter:' + time;
+        document.title = time;
         window.localStorage.setItem('time-key', time);
-
-        return () => {
-            // debugger
-            // // console.log('updated end');
-        }
     }, [time]);
 
     useLayoutEffect(() => {
-        const _time = parseInt(window.localStorage.getItem('time-key'));
-        if (!isNaN(_time)) {
-            setTime(_time);
+        const storedTime = parseInt(window.localStorage.getItem('time-key'));
+        if (!isNaN(storedTime)) {
+            setTime(storedTime);
         }
-    }, [])
+    }, []);
 
-    const toggle = () => {
-        setIsRunning(prev => !prev);
-    }
+    const onClickToggle = () => {
+        setIsRunning(prevState => !prevState);
+    };
 
-    const reset = () => {
+    const onClickReset = () => {
         setTime(0);
         setIsRunning(false);
     }
 
-    return {
-        time,
-        isRunning,
-        toggle,
-        reset
-    }
+    return {time, isRunning, onClickToggle, onClickReset};
 };
-
 export default useTimer;

@@ -1,34 +1,17 @@
 import {useState} from "react";
-import useTimer from "./useTimer";
+import Timer from "./Timer";
 
 const Example = () => {
     const [isDisplayed, setIsDisplayed] = useState(true);
 
     return (
         <>
+            <button onClick={() => setIsDisplayed(prevState => !prevState)}>
+                {isDisplayed ? 'hide a timer' : 'show  a timer'}
+            </button>
             {isDisplayed && <Timer/>}
-            <button onClick={() => setIsDisplayed(prev => !prev)}>{isDisplayed ? '非表示' : '表示'}</button>
-        </>
-    )
-}
-
-const Timer = () => {
-    const {time, isRunning, toggle, reset} = useTimer();
-
-    return (
-        <>
-            <h3>
-                <time>{time}</time>
-                <span>秒経過</span>
-            </h3>
-            <div>
-                <button onClick={toggle}>{isRunning ? '一時停止' : 'スタート'}</button>
-                <button onClick={reset}>リセット</button>
-            </div>
         </>
     );
 };
 
 export default Example;
-
-
