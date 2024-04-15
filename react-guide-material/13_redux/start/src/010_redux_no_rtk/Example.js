@@ -1,11 +1,11 @@
-import Counter from "./components/Counter";
+import CounterContainer from "./components/CounterContainer";
 import { Provider } from "react-redux";
-import store from "./store"
+import store from "./store/counterStore"
 
 const Example = () => {
     return (
         <Provider store={store}>
-            <Counter />
+            <CounterContainer />
         </Provider>
     );
 };

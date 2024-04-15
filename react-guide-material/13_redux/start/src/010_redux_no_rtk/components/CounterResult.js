@@ -1,12 +1,25 @@
-// 2023/10 存在しないファイルのimportでエラーが出るため修正
-// 使用していないCounterContextのimport削除
-
+// Importing useSelector from react-redux
 import { useSelector } from "react-redux"
-import {useEffect} from "react";
+
+/**
+ * CounterResult is a component that displays the current state from the Redux store.
+ *
+ * @returns {JSX.Element} A fragment that displays the current state
+ */
 const CounterResult = () => {
+    // useSelector hook is used to extract data from the Redux store state
+    // Here it's used to get the current state
     const state = useSelector(state => state);
 
-    return <h3>{state}</h3>;
+    console.log(state);
+
+    // Return a fragment displaying the current state
+    return (
+        <>
+            {state}
+        </>
+    );
 };
 
+// Exporting CounterResult as default export
 export default CounterResult;

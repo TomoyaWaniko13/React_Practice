@@ -1,15 +1,16 @@
-import { useDispatch } from "react-redux";
-// 使用していないCounterContextのimport削除
+import {useDispatch} from "react-redux";
 
-const CounterButton = ({calcType, step}) => {
+const CounterButton = ({type, payload}) => {
 
     const dispatch = useDispatch();
-    // const dispatch = useCounterDispatch();
+    const onClickHandler = () => dispatch({type, payload});
 
-    const clickHandler = () => {
-        dispatch({ type: calcType, step });
-    }
 
-    return <button onClick={clickHandler}>{calcType}{step}</button>
-}
+    return (
+        <>
+            <button onClick={onClickHandler}>{type}{payload}</button>
+        </>
+    );
+};
+
 export default CounterButton;

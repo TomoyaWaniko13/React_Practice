@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from "redux";
-import {reducer} from "../modules/counter";
+import {reducer} from "../modules/counterReducer";
 
 /**
  * Combines all the reducers into a single reducing function with each key corresponding

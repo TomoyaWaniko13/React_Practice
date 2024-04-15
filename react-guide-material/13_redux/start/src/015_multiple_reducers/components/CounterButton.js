@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
 
-const CounterButton = ({calcType, step}) => {
+const CounterButton = ({type,  payload}) => {
     
     const dispatch = useDispatch();
     // const dispatch = useCounterDispatch();
     
     const clickHandler = () => {
-        dispatch({ type: 'counter/' + calcType, step });
+        dispatch({ type: 'counter/' + type,  payload });
     }
 
-    return <button onClick={clickHandler}>{calcType}{step}</button>
+    return <button onClick={clickHandler}>{type}{payload}</button>
 }
 export default CounterButton;

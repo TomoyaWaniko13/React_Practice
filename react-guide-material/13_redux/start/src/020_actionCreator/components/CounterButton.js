@@ -8,7 +8,7 @@
  * @param {number} props.step - The amount to increment or decrement the counter by.
  */
 import {useDispatch} from "react-redux";
-import {add, subtract} from "../modules/counter";
+import {add, subtract} from "../modules/counterReducer";
 
 const CounterButton = ({calcType, step}) => {
     // useDispatch is a hook from react-redux that returns the dispatch function.
