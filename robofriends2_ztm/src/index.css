@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: "Malayalam MN", serif
+
+}
+
+/*@font-face {*/
+/*    font-family: Horizon;*/
+/*    src: url(Horizon.ttf);*/
+/*}*/
+
+/*h1{*/
+/*    font-family: Horizon;*/
+/*}*/

@@ -1,19 +1,19 @@
 // POINT テストコードをまとめよう
 import { fireEvent, render, screen } from "@testing-library/react";
-import Counter from "./Counter";
+import CounterContainer from "./CounterContainer";
 
 describe('Counterコンポーネントの動作確認', () => {
 
   describe('初期表示の正常確認', () => {
     test('現在のカウントが0かどうか', () => {
-      render(<Counter originCount={0} />);
+      render(<CounterContainer originCount={0} />);
       
       const spanElBeforeUpdate = screen.getByText('現在のカウント:0')
       expect(spanElBeforeUpdate).toBeInTheDocument();
     });
 
     test('現在のカウントが1かどうか', () => {
-      render(<Counter originCount={1} />);
+      render(<CounterContainer originCount={1} />);
       
       const spanElBeforeUpdate = screen.getByText('現在のカウント:1')
       expect(spanElBeforeUpdate).toBeInTheDocument();
@@ -22,7 +22,7 @@ describe('Counterコンポーネントの動作確認', () => {
 
   describe('ボタン制御の確認', () => {
     test('「カウントアップ」押下で「現在のカウント」が+1されるか', () => {
-      render(<Counter originCount={0} />);
+      render(<CounterContainer originCount={0} />);
       
       const spanElBeforeUpdate = screen.getByText('現在のカウント:0')
       expect(spanElBeforeUpdate).toBeInTheDocument();
@@ -35,7 +35,7 @@ describe('Counterコンポーネントの動作確認', () => {
     })
   
     test('「カウントダウン」押下で「現在のカウント」が-1されるか', () => {
-      render(<Counter originCount={0} />);
+      render(<CounterContainer originCount={0} />);
       
       const spanElBeforeUpdate = screen.getByText('現在のカウント:0')
       expect(spanElBeforeUpdate).toBeInTheDocument();
@@ -48,7 +48,7 @@ describe('Counterコンポーネントの動作確認', () => {
     })
   
     test('「クリア」押下で「現在のカウント」が0になるか', () => {
-      render(<Counter originCount={2} />);
+      render(<CounterContainer originCount={2} />);
       
       const spanElBeforeUpdate = screen.getByText('現在のカウント:2')
       expect(spanElBeforeUpdate).toBeInTheDocument();

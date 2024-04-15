@@ -306,7 +306,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'stage-3': __webpack_require__(222),
 
 	  // ES2015 preset with es2015-modules-commonjs removed
-	  // Plugin list copied from babel-preset-es2015/index.js
+	  // Plugin list copied from babel-preset-es2015/store.js
 	  'es2015-no-commonjs': {
 	    plugins: [__webpack_require__(83), __webpack_require__(76), __webpack_require__(75), __webpack_require__(68), __webpack_require__(69), __webpack_require__(71), __webpack_require__(78), __webpack_require__(80), __webpack_require__(72), __webpack_require__(74), __webpack_require__(82), __webpack_require__(85), __webpack_require__(66), __webpack_require__(81), __webpack_require__(79), __webpack_require__(73), __webpack_require__(70), __webpack_require__(84), [__webpack_require__(86), { async: false, asyncGenerators: false }]]
 	  },
@@ -50152,7 +50152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	// This regex comes from regex.coffee, and is inserted here by generate-index.js
+	// This regex comes from regex.coffee, and is inserted here by generate-store.js
 	// (run `npm run build`).
 	exports.default = /((['"])(?:(?!\2|\\).|\\(?:\r\n|[\s\S]))*(\2)?|`(?:[^`\\$]|\\[\s\S]|\$(?!\{)|\$\{(?:[^{}]|\{[^}]*\}?)*\}?)*(`)?)|(\/\/.*)|(\/\*(?:[^*]|\*(?!\/))*(\*\/)?)|(\/(?!\*)(?:\[(?:(?![\]\\]).|\\.)*\]|(?![\/\]\\]).|\\.)+\/(?:(?!\s*(?:\b|[\u0080-\uFFFF$\\'"~({]|[+\-!](?!=)|\.?\d))|[gmiyu]{1,5}\b(?![\u0080-\uFFFF$\\]|\s*(?:[+\-*%&|^<>!=?({]|\/(?![\/*])))))|(0[xX][\da-fA-F]+|0[oO][0-7]+|0[bB][01]+|(?:\d*\.\d+|\d+\.?)(?:[eE][+-]?\d+)?)|((?!\d)(?:(?!\s)[$\w\u0080-\uFFFF]|\\u[\da-fA-F]{4}|\\u\{[\da-fA-F]+\})+)|(--|\+\+|&&|\|\||=>|\.{3}|(?:[+\-\/%&|^]|\*{1,2}|<{1,2}|>{1,3}|!=?|={1,2})=?|[?~.,:;[\](){}])|(\s+)|(^$|[\s\S])/g;
 

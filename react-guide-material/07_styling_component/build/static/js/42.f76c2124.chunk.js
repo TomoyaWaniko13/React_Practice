@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_app_template=self.webpackChunkreact_app_template||[]).push([[42,782],{8042:(t,e,a)=>{a.r(e),a.d(e,{default:()=>c});var s=a(5782),u=a(579);const c=()=>(0,u.jsx)("button",{className:s.default.btn,children:"\u30b5\u30d6\u30dc\u30bf\u30f3"})},5782:(t,e,a)=>{a.r(e),a.d(e,{default:()=>s});const s={btn:"SubButton_btn__KUGeM",selected:"SubButton_selected__Rbpb7"}}}]);
+//# sourceMappingURL=42.f76c2124.chunk.js.map

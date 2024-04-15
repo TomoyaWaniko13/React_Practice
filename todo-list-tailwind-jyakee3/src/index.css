@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Horizon;
+}
+
+@font-face {
+  font-family: Horizon;
+  src: url(Horizon.ttf);
+}

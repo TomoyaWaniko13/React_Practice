@@ -1,32 +1,17 @@
 import { createStore, combineReducers } from "redux";
+import {reducer} from "../modules/counter";
 
-const initialState = 0;
-const reducer = (state = initialState, { type, step }) => {
-  console.log(type);
-  switch (type) {
-    case "counter/+":
-      return state + step;
-    case "counter/-":
-      return state - step;
-    default:
-      return state;
-  }
-};
-const reducer2 = (state = initialState, { type, step }) => {
-  console.log(type);
-  switch (type) {
-    case "counter2/+":
-      return state + step;
-    case "counter2/-":
-      return state - step;
-    default:
-      return state;
-  }
-};
-
+/**
+ * Combines all the reducers into a single reducing function with each key corresponding
+ * to the slice of the state managed by the respective reducer.
+ * @type {Function}
+ */
 const reducers = combineReducers({
-  counter: reducer,
-  counter2: reducer2,
+  counter: reducer
 });
 
+/**
+ * Creates a Redux store that holds the complete state tree of your app.
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions and subscribe to changes.
+ */
 export default createStore(reducers);
