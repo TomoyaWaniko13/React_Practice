@@ -34,6 +34,5 @@ const addAsync = (payload) => {
   }
 }
 
-
 export { add, minus, addAsync }
 export default counter.reducer
