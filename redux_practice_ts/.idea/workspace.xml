@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8ad5e05d-042a-436e-bb0f-b3f57fa01ee8" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/../TodoList_TypeScript/.idea/TodoList_TypeScript.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TodoList_TypeScript/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TodoList_TypeScript/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TodoList_TypeScript/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TodoList_TypeScript/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/.idea/redux_practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/src/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/src/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/my-project/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux_practice/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/main.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/reducers/counter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/reducers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/reducers/isLogin.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/src/vite-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/tsconfig.node.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite-project-redux-ts/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TomoyaWaniko13&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:TomoyaWaniko13/React_Practice.git&quot;,
+    &quot;accountId&quot;: &quot;b9c0a875-fa29-4105-af29-85c48cc3f557&quot;
+  }
+}</component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2fCVHepEqLgGYbfZqgtPxsenbRH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/React_Practice/redux_practice_ts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/okadatomoya/Desktop/Programming/React_Practice/redux_practice_ts/vite-project-redux-ts/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/okadatomoya/Desktop/Programming/React_Practice/redux_practice_ts/vite-project-redux-ts/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/vite-project-redux-ts/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ad5e05d-042a-436e-bb0f-b3f57fa01ee8" name="Changes" comment="" />
+      <created>1700420417624</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700420417624</updated>
+      <workItem from="1713304961925" duration="706000" />
+      <workItem from="1713305753363" duration="1195000" />
+      <workItem from="1713306957461" duration="2221000" />
+      <workItem from="1713309965597" duration="3042000" />
+      <workItem from="1713313275380" duration="583000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update">
+      <option name="closed" value="true" />
+      <created>1713305034121</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713305034121</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
+</project>
