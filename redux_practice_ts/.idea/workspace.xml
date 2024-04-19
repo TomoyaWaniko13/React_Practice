@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ad5e05d-042a-436e-bb0f-b3f57fa01ee8" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart-redux-ts/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart-redux-ts/src/components/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart-redux-ts/src/features/cart/CartSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart-redux-ts/src/store.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +107,7 @@
       <workItem from="1713309965597" duration="3042000" />
       <workItem from="1713313275380" duration="583000" />
       <workItem from="1713339796554" duration="524000" />
+      <workItem from="1713507971083" duration="155000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
