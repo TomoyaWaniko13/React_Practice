@@ -2,21 +2,21 @@ import { CiShoppingCart } from 'react-icons/ci';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-  // useSelector() allows us to access a store and store's state..
-  const { quantity } = useSelector((store) => store.cart);
-
+  // selector = 'selecting' data from the Redux store.
+  const { numberOfItemsAddedToCart } = useSelector((store) => store.cart);
   return (
-    <nav className={'bg-black text-white w-full flex justify-evenly items-center h-32'}>
-      <div>
-        <h3 className={'text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl'}>Redux shopping</h3>
-      </div>
-      <div className={'relative'}>
-        <CiShoppingCart size={40} className={'cursor-pointer'} />
-        <div className='absolute -top-3 -right-3 flex items-center justify-center w-6 h-6 bg-white rounded-full text-black'>
-          {quantity}
+    <nav>
+      <div className={'bg-black w-full text-white h-32 flex items-center justify-around'}>
+        <h3 className={'text-4xl'}>Redux Shopping</h3>
+        <div className={'relative inline-block'}>
+          <CiShoppingCart size={40} />
+          <p className={'absolute -top-2 left-8 m-0 bg-white text-black rounded-full text-lg px-2 '}>
+            {numberOfItemsAddedToCart}
+          </p>
         </div>
       </div>
     </nav>
   );
 };
+
 export default Navbar;
