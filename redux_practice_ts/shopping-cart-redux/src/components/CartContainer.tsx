@@ -1,15 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import CartItem from './CartItem.tsx';
 import { removeAllItems } from '../features/cart/CartSlice.ts';
+import cartItems from '../cartItems.ts';
 
 const CartContainer = () => {
   const { cartItems, numberOfItemsAddedToCart, totalCost } = useSelector((storeState) => storeState.cart);
   const dispatch = useDispatch();
 
   const onClickClearCart = () => {
-    if (window.confirm('Are you sure you want to clear the cart?')) {
-      dispatch(removeAllItems());
-    }
+    dispatch(removeAllItems());
   };
 
   if (numberOfItemsAddedToCart < 1) {

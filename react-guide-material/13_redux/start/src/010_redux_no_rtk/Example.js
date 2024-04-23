@@ -1,13 +1,15 @@
-import CounterContainer from "./components/CounterContainer";
-import { Provider } from "react-redux";
-import store from "./store/counterStore"
+import { Provider } from 'react-redux';
+import CounterContainer from './components/CounterContainer';
+import counterStore from './store/counterStore';
 
 const Example = () => {
-    return (
-        <Provider store={store}>
-            <CounterContainer />
-        </Provider>
-    );
+  return (
+    <>
+      <Provider store={counterStore}>
+        <CounterContainer />
+      </Provider>
+    </>
+  );
 };
 
 export default Example;
