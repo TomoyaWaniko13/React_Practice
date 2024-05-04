@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d148327b-36c4-487b-9ed7-21c60e2cb74f" name="Changes" comment="" />
+    <list default="true" id="d148327b-36c4-487b-9ed7-21c60e2cb74f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modal/vite-project-ref/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Modal/vite-project-ref/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modal/vite-project-ref/src/components/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Modal/vite-project-ref/src/components/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modal/vite-project-ref/src/components/MyInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Modal/vite-project-ref/src/components/MyInput.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "TomoyaWaniko13"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TomoyaWaniko13&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:TomoyaWaniko13/React_Practice.git",
-    "accountId": "b9c0a875-fa29-4105-af29-85c48cc3f557"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:TomoyaWaniko13/React_Practice.git&quot;,
+    &quot;accountId&quot;: &quot;b9c0a875-fa29-4105-af29-85c48cc3f557&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2fBHxIWCvOpNuoygmWWRBcHJrhk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,7 +47,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/okadatomoya/Desktop/Programming/React_Practice/TodoList_TypeScript",
+    "last_opened_file_path": "/Users/okadatomoya/Programming/React_Practice/TodoList_TypeScript",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -55,7 +67,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
       </set>
     </attachedChunks>
   </component>
@@ -68,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700420417624</updated>
       <workItem from="1713267796640" duration="192000" />
+      <workItem from="1714322768791" duration="17000" />
     </task>
     <servers />
   </component>
