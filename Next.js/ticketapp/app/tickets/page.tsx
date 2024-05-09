@@ -1,4 +1,10 @@
-const tickets = () => {
+import prisma from '@/prisma/db';
+
+const Tickets = async () => {
+  const tickets = await prisma.ticket.findMany();
+
+  console.log(tickets);
+
   return (
     <>
       <h1>tickets</h1>
@@ -6,4 +12,4 @@ const tickets = () => {
   );
 };
 
-export default tickets;
+export default Tickets;
