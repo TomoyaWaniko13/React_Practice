@@ -1,4 +1,4 @@
-'use client';
+import CourseForm from '@/app/course/CourseForm';
 
 const course_data = [
   { name: 'Next.js', hours: 7 },
@@ -7,10 +7,6 @@ const course_data = [
 ];
 
 const course = () => {
-  const onSubmit = () => {
-    console.log('hello world!');
-  };
-
   return (
     <>
       <h1>All courses</h1>
@@ -18,10 +14,7 @@ const course = () => {
         <h2 key={course.name}>{course.name}</h2>
       ))}
 
-      <form onSubmit={onSubmit}>
-        <input type='text' name={'name'} className={'border'} />
-        <button type={'submit'}>Submit</button>
-      </form>
+      <CourseForm />
     </>
   );
 };
